@@ -375,7 +375,7 @@ static void drawJars(uint8_t alpha)
 	drawJar(jar_db_png_index, jar_db_png_x, jar_db_png_y, (alpha == 0xFF ? "BD Online" : ""), alpha);
 	
 	//User Backup
-	drawJar(jar_bup_png_index, jar_bup_png_x, jar_bup_png_y, (alpha == 0xFF ? "Herramientas de Usuario" : ""), alpha);
+	drawJar(jar_bup_png_index, jar_bup_png_x, jar_bup_png_y, (alpha == 0xFF ? "Herramientas" : ""), alpha);
 
 	//Options
 	drawJar(jar_opt_png_index, jar_opt_png_x, jar_opt_png_y, (alpha == 0xFF ? "Ajustes" : ""), alpha);
