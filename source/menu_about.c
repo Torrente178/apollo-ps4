@@ -23,6 +23,7 @@ const char * menu_about_strings[] = { "Bucanero", "Developer",
 									"Berion", "GUI design",
 									"Dnawrkshp", "Artemis code",
 									"aldostools", "Bruteforce Save Data",
+									"TheZodiacoX", "Spanish Translate",
 									NULL };
 
 const char * menu_about_strings_project[] = { "User ID", user_id_str,
