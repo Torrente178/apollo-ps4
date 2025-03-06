@@ -32,13 +32,13 @@ menu_option_t menu_options[] = {
 		.value = &apollo_config.music, 
 		.callback = music_callback 
 	},
-	{ .name = "Animaciones de lMenu", 
+	{ .name = "Animaciones del Menu", 
 		.options = NULL, 
 		.type = APP_OPTION_BOOL, 
 		.value = &apollo_config.doAni, 
 		.callback = ani_callback 
 	},
-	{ .name = "Sort Saves",
+	{ .name = "Filtrar Archivos de Guardado",
 		.options = sort_opt,
 		.type = APP_OPTION_LIST,
 		.value = &apollo_config.doSort,
@@ -106,8 +106,8 @@ static void usb_callback(int sel)
 
 static void db_url_callback(int sel)
 {
-	if (osk_dialog_get_text("Enter the URL of the online database", apollo_config.save_db, sizeof(apollo_config.save_db)))
-		show_message("Online database URL changed to:\n%s", apollo_config.save_db);
+	if (osk_dialog_get_text("Escribe la URL de la Base de Datos Online", apollo_config.save_db, sizeof(apollo_config.save_db)))
+		show_message("URL de Base de datos Online cambiada a:\n%s", apollo_config.save_db);
 
 	if (apollo_config.save_db[strlen(apollo_config.save_db)-1] != '/')
 		strcat(apollo_config.save_db, "/");
@@ -118,7 +118,7 @@ static void clearcache_callback(int sel)
 	LOG("Cleaning folder '%s'...", APOLLO_LOCAL_CACHE);
 	clean_directory(APOLLO_LOCAL_CACHE);
 
-	show_message("Local cache folder cleaned:\n" APOLLO_LOCAL_CACHE);
+	show_message("Carpeta de Cache Local limpiada:\n" APOLLO_LOCAL_CACHE);
 }
 
 static void upd_appdata_callback(int sel)
@@ -126,12 +126,12 @@ static void upd_appdata_callback(int sel)
 	int i;
 
 	if (!http_download(ONLINE_PATCH_URL, "apollo-ps4-update.zip", APOLLO_LOCAL_CACHE "appdata.zip", 1))
-		show_message("Error! Can't download data update file!");
+		show_message("Error! No se ha podido descargar archivos de actualizacion de datos!");
 
 	if ((i = extract_zip(APOLLO_LOCAL_CACHE "appdata.zip", APOLLO_DATA_PATH)) > 0)
-		show_message("Successfully updated %d save patch files!", i);
+		show_message("Se ha actualizado los archivos de parche %d exitosamente!", i);
 	else
-		show_message("Error! Can't extract data update file!");
+		show_message("Error! No se ha podido extraer los archivos de actualizacion de datos!");
 
 	unlink_secure(APOLLO_LOCAL_CACHE "appdata.zip");
 }
