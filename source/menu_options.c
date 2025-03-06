@@ -84,6 +84,6 @@ void Draw_OptionsMenu_Ani(void)
 
 void Draw_OptionsMenu(void)
 {
-    DrawHeader(cat_opt_png_index, 0, "Settings", NULL, APP_FONT_TITLE_COLOR | 0xFF, 0xffffffff, 0);
+    DrawHeader(cat_opt_png_index, 0, "Ajustes", NULL, APP_FONT_TITLE_COLOR | 0xFF, 0xffffffff, 0);
     _draw_OptionsMenu(0xFF);
 }
