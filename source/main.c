@@ -78,7 +78,7 @@ uint32_t* free_mem;                         // Pointer after last texture
 */
 save_list_t hdd_saves = {
 	.icon_id = cat_hdd_png_index,
-	.title = "HDD Saves",
+	.title = "Partidas HDD",
     .list = NULL,
     .path = "",
     .ReadList = &ReadUserList,
@@ -91,7 +91,7 @@ save_list_t hdd_saves = {
 */
 save_list_t usb_saves = {
 	.icon_id = cat_usb_png_index,
-	.title = "USB Saves",
+	.title = "Partidas USB",
     .list = NULL,
     .path = "",
     .ReadList = &ReadUsbList,
@@ -104,7 +104,7 @@ save_list_t usb_saves = {
 */
 save_list_t trophies = {
 	.icon_id = cat_warning_png_index,
-	.title = "Trophies",
+	.title = "Trofeos",
     .list = NULL,
     .path = "",
     .ReadList = &ReadTrophyList,
@@ -117,7 +117,7 @@ save_list_t trophies = {
 */
 save_list_t online_saves = {
 	.icon_id = cat_db_png_index,
-	.title = "Online Database",
+	.title = "BD Online",
     .list = NULL,
     .path = ONLINE_URL,
     .ReadList = &ReadOnlineList,
@@ -130,7 +130,7 @@ save_list_t online_saves = {
 */
 save_list_t user_backup = {
     .icon_id = cat_bup_png_index,
-    .title = "User Tools",
+    .title = "Herramientas del Usuario",
     .list = NULL,
     .path = "",
     .ReadList = &ReadBackupList,
