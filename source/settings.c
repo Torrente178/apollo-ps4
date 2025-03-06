@@ -26,13 +26,13 @@ static void clearcache_callback(int sel);
 static void upd_appdata_callback(int sel);
 
 menu_option_t menu_options[] = {
-	{ .name = "\nBackground Music", 
+	{ .name = "\nMusica de fondo", 
 		.options = NULL, 
 		.type = APP_OPTION_BOOL, 
 		.value = &apollo_config.music, 
 		.callback = music_callback 
 	},
-	{ .name = "Menu Animations", 
+	{ .name = "Animaciones de lMenu", 
 		.options = NULL, 
 		.type = APP_OPTION_BOOL, 
 		.value = &apollo_config.doAni, 
@@ -44,37 +44,37 @@ menu_option_t menu_options[] = {
 		.value = &apollo_config.doSort,
 		.callback = sort_callback
 	},
-	{ .name = "\nUSB Saves Source",
+	{ .name = "\nDeteccion de Saves USB",
 		.options = (char**) usb_src,
 		.type = APP_OPTION_LIST,
 		.value = &apollo_config.usb_dev,
 		.callback = usb_callback
 	},
-	{ .name = "\nVersion Update Check", 
+	{ .name = "\nComprobar si hay nueva version", 
 		.options = NULL, 
 		.type = APP_OPTION_BOOL, 
 		.value = &apollo_config.update, 
 		.callback = update_callback 
 	},
-	{ .name = "Change Online Database URL",
+	{ .name = "Cambiar URL de la Base de datos Online",
 		.options = NULL,
 		.type = APP_OPTION_CALL,
 		.value = NULL,
 		.callback = db_url_callback 
 	},
-	{ .name = "Clear Local Cache", 
+	{ .name = "Limpiar Cache Local", 
 		.options = NULL, 
 		.type = APP_OPTION_CALL, 
 		.value = NULL, 
 		.callback = clearcache_callback 
 	},
-	{ .name = "Update Application Data", 
+	{ .name = "Actualizar datos de aplicacion", 
 		.options = NULL, 
 		.type = APP_OPTION_CALL, 
 		.value = NULL, 
 		.callback = upd_appdata_callback 
 	},
-	{ .name = "\nEnable Debug Log",
+	{ .name = "\nHabilitar Registros de Depuracion",
 		.options = NULL,
 		.type = APP_OPTION_BOOL,
 		.value = &apollo_config.dbglog,
@@ -281,7 +281,7 @@ int save_app_settings(app_config_t* config)
 	snprintf(filePath, sizeof(filePath), APOLLO_SETTING_PATH "settings.bin", mountResult.mountPathName);
 	write_buffer(filePath, (uint8_t*) config, sizeof(app_config_t));
 
-	updateSaveParams(mountResult.mountPathName, "Apollo Save Tool", "User Settings", "www.bucanero.com.ar", 0);
+	updateSaveParams(mountResult.mountPathName, "Apollo Save Tool", "Ajustes del Usuario", "www.bucanero.com.ar", 0);
 	if (sceSaveDataUmount((void*)&mountResult.mountPathName) < 0)
 	{
 		LOG("UMOUNT ERROR");
