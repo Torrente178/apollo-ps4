@@ -55,7 +55,7 @@
 
 #define IMP_PS2VMC_PATH_USB     USB_PATH "PS2/VMC/"
 
-#define ONLINE_URL              "https://bucanero.github.io/apollo-saves/"
+#define ONLINE_URL              "https://z-jailbreak.github.io/Z-Saves/"
 #define ONLINE_PATCH_URL        "https://bucanero.github.io/apollo-patches/PS4/"
 #define ONLINE_CACHE_TIMEOUT    24*3600     // 1-day local cache
 
