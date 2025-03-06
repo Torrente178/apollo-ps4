@@ -78,7 +78,7 @@ uint32_t* free_mem;                         // Pointer after last texture
 */
 save_list_t hdd_saves = {
 	.icon_id = cat_hdd_png_index,
-	.title = "Partidas HDD",
+	.title = "Guardados HDD",
     .list = NULL,
     .path = "",
     .ReadList = &ReadUserList,
@@ -91,7 +91,7 @@ save_list_t hdd_saves = {
 */
 save_list_t usb_saves = {
 	.icon_id = cat_usb_png_index,
-	.title = "Partidas USB",
+	.title = "Guardados USB",
     .list = NULL,
     .path = "",
     .ReadList = &ReadUsbList,
@@ -117,7 +117,7 @@ save_list_t trophies = {
 */
 save_list_t online_saves = {
 	.icon_id = cat_db_png_index,
-	.title = "BD Online",
+	.title = "Base de Datos Online",
     .list = NULL,
     .path = ONLINE_URL,
     .ReadList = &ReadOnlineList,
@@ -641,7 +641,7 @@ s32 main(s32 argc, const char* argv[])
 		LOG("Unpacking application data...");
 //		clean_directory(APOLLO_DATA_PATH);
 		if (extract_zip(APOLLO_APP_PATH "misc/appdata.zip", APOLLO_DATA_PATH))
-			notify_popup(NOTIFICATION_ICON_DEFAULT, "Successfully installed local application data");
+			notify_popup(NOTIFICATION_ICON_DEFAULT, "Datos de Aplicacion locales instalados exitosamente");
 
 		strncpy(apollo_config.app_ver, APOLLO_VERSION, sizeof(apollo_config.app_ver));
 		save_app_settings(&apollo_config);
