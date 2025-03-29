@@ -383,6 +383,9 @@ static void drawJars(uint8_t alpha)
 	//About
 	drawJar(jar_about_png_index, jar_about_png_x, jar_about_png_y, (alpha == 0xFF ? "About" : ""), alpha);
 
+	//Test
+	drawJar(jar_db_png_index, jar_about_png_x, jar_db_png_y, (alpha == 0xFF ? "Prueba" : ""), alpha);
+
 	SetFontAlign(FONT_ALIGN_LEFT);
 }
 
