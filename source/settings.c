@@ -102,7 +102,7 @@ static void sort_callback(int sel)
 
 static void ani_callback(int sel)
 {
-	apollo_config.doAni = !sel;
+	apollo_config.doAni = sel;
 }
 
 static void usb_callback(int sel)
