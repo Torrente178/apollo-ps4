@@ -56,6 +56,12 @@ menu_option_t menu_options[] = {
 		.value = &apollo_config.update, 
 		.callback = update_callback 
 	},
+	{ .name = "\nDescargar PKG desde github", 
+		.options = NULL, 
+		.type = APP_OPTION_CALL, 
+		.value = &apollo_config.update, 
+		.callback = update_callback 
+	},
 	{ .name = "Change Online Database URL",
 		.options = NULL,
 		.type = APP_OPTION_CALL,
